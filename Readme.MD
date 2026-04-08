@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 Learning Under Constraints
+# Learning Under Constraints
 
 ### KnowledgeQuarry · Problem 02 · ML Engineering Track
 **Convoke 8.0 · Cluster Innovation Centre, University of Delhi**
@@ -14,7 +14,7 @@
 
 ---
 
-## 📋 Problem Statement
+## Problem Statement
 
 > Design a system where heterogeneous agents complete distributed tasks under resource constraints. The system must **learn and improve its strategy over repeated episodes** — demonstrating measurable adaptation, not just a static solution.
 
@@ -22,7 +22,7 @@ We model a **10×10 warehouse delivery grid** where a Drone and a Ground Robot m
 
 ---
 
-## 🎯 Approach Overview
+## Approach Overview
 
 | Component | Choice | Reason |
 |---|---|---|
@@ -34,7 +34,7 @@ We model a **10×10 warehouse delivery grid** where a Drone and a Ground Robot m
 
 ---
 
-## 🏗️ Environment Design
+## Environment Design
 
 A 10×10 Manhattan grid with 8 tasks randomly spawned each episode. All tasks must be picked up and delivered to the **central depot at (5, 5)**.
 
@@ -56,7 +56,7 @@ A 10×10 Manhattan grid with 8 tasks randomly spawned each episode. All tasks mu
 
 ---
 
-## 🤖 Agent Specifications
+## Agent Specifications
 
 | Property | Drone | Ground Robot |
 |---|---|---|
@@ -70,7 +70,7 @@ The two agents have fundamentally different trade-offs — the drone is fast but
 
 ---
 
-## 🧠 Q-Learning Setup
+## Q-Learning Setup
 
 ### Hyperparameters
 
@@ -120,7 +120,7 @@ Every action directly moves an agent — no action is a no-op. This ensures a de
 
 ---
 
-## 📊 Results
+## Results
 
 ### Training Plots
 
@@ -143,7 +143,7 @@ The Q-agent completes **21.6% more tasks per episode than random**, and **89% mo
 
 ---
 
-## 🖥️ Dashboard
+## Dashboard
 
 An interactive Streamlit dashboard visualises the full training run and simulates live episodes.
 
@@ -151,24 +151,8 @@ An interactive Streamlit dashboard visualises the full training run and simulate
 
 ### Screenshot — Training Charts
 
-![Dashboard Charts](kq_results.png)
-
-### Screenshot — Live Grid Simulation
-
-> The grid section shows the 10x10 warehouse with:
-> - Blue dashed path = Drone movement trail
-> - Purple dashed path = Robot movement trail
-> - Orange circles = Pending tasks
-> - Green circles = Delivered tasks
-> - Green square = Depot at (5,5)
-> - Triangle marker = Drone final position
-> - Square marker = Robot final position
-
-**Add your own screenshot here:** run `streamlit run kq_dashboard.py`, take a screenshot of the grid section, save as `dashboard_grid.png` in the repo root, and replace this block with:
-
-```
 ![Dashboard Grid](dashboard_grid.png)
-```
+
 
 ### Dashboard Features
 
@@ -183,14 +167,14 @@ An interactive Streamlit dashboard visualises the full training run and simulate
 
 ---
 
-## 🎤 Presentation
+## Presentation
 
 **[View Presentation](https://drive.google.com/file/d/1HlJZMMnoePDRqXsickOboUleFjmGpywm/view?usp=sharing)**
 
 
 ---
 
-## 📁 File Structure
+## File Structure
 
 ```
 ├── kq_solution.py             # Training — environment, Q-agent, baselines, plots
@@ -204,7 +188,7 @@ An interactive Streamlit dashboard visualises the full training run and simulate
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 **Step 1 — Install dependencies**
 ```bash
@@ -225,7 +209,7 @@ Opens automatically in your browser at `localhost:8501`.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Library | Purpose |
 |---|---|
@@ -237,7 +221,7 @@ Opens automatically in your browser at `localhost:8501`.
 
 ---
 
-## 🔮 Next Steps (for April 10th)
+## Next Steps (for April 10th)
 
 - Upgrade Q-table to Deep Q-Network (DQN) for better generalisation
 - Add a third agent type (cargo truck — very slow, massive capacity)
